@@ -572,6 +572,7 @@ footer .linkDatenschutz p:hover {
 @media only screen and (max-width: 1270px) {
     #kontakt .kontakt-inhalt {
         flex-direction: column;
+        align-items: center;
         max-width: 600px;
     }
 
@@ -710,6 +711,7 @@ footer .linkDatenschutz p:hover {
 
     #laufbahn .laufbahn-bottom .laufbahn-item {
         width: 400px;
+        height: 1000px;
     }
 
     #skills .alle-skills {
