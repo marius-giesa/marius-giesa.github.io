@@ -3,7 +3,7 @@
 /*Alter-Aufgabe*/
 window.onload = function altercalc() {
     var alter;
-    var tag = 09;
+    var tag = 20;
     var monat = 12;
     var jahr = 1996;
     var datum = new Date();
