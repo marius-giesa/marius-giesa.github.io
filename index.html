@@ -1,237 +1,279 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <meta name="robots" content="noindex">
-
-    <title>Meine Webseite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="noindex">
+  <title>Meine Webseite</title>
 </head>
-
 <body>
-    <header id="navb">
-        <nav id="main-nav">
-            <div id="hamburger" class="hamburger-icon-container">
-                <span class="hamburger-icon"></span>
+  <header id="navb">
+    <nav id="main-nav">
+      <div id="hamburger" class="hamburger-icon-container">
+        <span class="hamburger-icon"></span>
+      </div>
+      <ul class="hauptmenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#laufbahn">Laufbahn</a></li>
+        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="#skills">Fähigkeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Home Section-->
+  <section id="home">
+    <div class="home container">
+      <div>
+        <h1>Hi,<span></span></h1>
+        <h1>Ich bin Marius<span></span></h1>
+      </div>
+    </div>
+  </section>
+  <!--Ende Home Section-->
+
+  <!--About Section (Originales Design: Bild links mit Rahmen, Text rechts)-->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="titelbild.png" alt="Bild konnte nicht geladen werden.">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">Über mich</h1>
+        <h2>Wer bin ich?</h2>
+        <p>Mein Name ist Marius und ich bin <span id="alter"></span> Jahre alt. Im Moment befinde ich mich auf meinem Weg meinen Masterabschluss zu machen. <br /><br />Neben der Hochschule engagiere ich mich in verschiedenen ehrenamtlichen Organisationen.</p>
+      </div>
+    </div>
+  </section>
+  <!--Ende About Section-->
+
+  <!--Laufbahn Section (Timeline)-->
+  <section id="laufbahn">
+    <div class="laufbahn container">
+      <div class="laufbahn-top">
+        <h1 class="section-title">Laufbahn</h1>
+      </div>
+      <div class="laufbahn-bottom">
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <!-- Timeline Event: left (Bild links, Text rechts) -->
+          <div class="timeline-event left">
+            <div class="image">
+              <img src="rmitLogo.png" alt="Logo Laufbahn Event">
             </div>
-            <ul class="hauptmenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#laufbahn">Laufbahn</a></li>
-                <li><a href="#skills">Fähigkeiten</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#impressum">Impressum</a></li>
+            <div class="content">
+              <h2>M.Sc. International Automotive Engineering</h2>
+              <p class="subtitle">Okt 2023 – heute</p>
+              <p>Meinen Master Abschluss mache ich in einer Dual Degree Kooperation: Zwei Semester an der FH Aachen, zwei Semester an der RMIT University in Melbourne. Grade befinde ich mich im letzten Semester des Master Abschlusses.</p>
+            </div>
+            <div class="dot"></div>
+          </div>
+          
+          <!-- Timeline Event: right (Text links, Bild rechts) -->
+          <div class="timeline-event right">
+            <div class="content">
+              <h2>Student Intern &amp; Working Student</h2>
+              <p class="subtitle">Okt 2022 – Mai 2023</p>
+              <p>Zum Ende meines Bachelor Abschlusses hatte ich die Möglichkeit sieben Monate bei der Bertrandt Technologie GmbH in Koblenz zu arbeiten. Hier habe ich mein Praktikum mit anschlißender Bachelorarbeit erfolgreich abgeschlossen.</p>
+            </div>
+            <div class="image">
+              <img src="bertLogo.png" alt="Logo Laufbahn Event">
+            </div>
+            <div class="dot"></div>
+          </div>
+          
+          <div class="timeline-event left">
+            <div class="image">
+              <img src="fhLogo.png" alt="Logo Laufbahn Event">
+            </div>
+            <div class="content">
+              <h2>B.Eng. Fahrzeug- und Antriebstechnik</h2>
+              <p class="subtitle">Okt 2018 – Mai 2023</p>
+              <p>Mein Ingenieursstudium im Bereich Fahrzeugtechnik, mit besonderem Fokus auf Interieur- und Karosserietechnik habe ich erfolgreich an der FH Aachen gemacht. Dazu habe ich mich entschieden, weil ich deutlich praxisnäher studieren wollte.</p>
+            </div>
+            <div class="dot"></div>
+          </div>
+          
+          <div class="timeline-event right">
+            <div class="content">
+              <h2>Student Assistant</h2>
+              <p class="subtitle">Nov 2018 – Okt 2022</p>
+              <p>In den vier Jahren als HiWi bei Institut für Kraftfahrzeuge habe ich parallel zu meinem Studium viele nützlichen Erfahrungen im Industrie- und Forschungsumfeld gesammelt.</p>
+            </div>
+            <div class="image">
+              <img src="ikafkaLogo.png" alt="Logo Laufbahn Event">
+            </div>
+            <div class="dot"></div>
+          </div>
+          
+          <div class="timeline-event left">
+            <div class="image">
+              <img src="rwthLogo.png" alt="Logo Laufbahn Event">
+            </div>
+            <div class="content">
+              <h2>Studium Computational EngineeringScience</h2>
+              <p class="subtitle">Okt 2015 – Sep 2018</p>
+              <p>Nach der Schule habe ich meine Laufbahn mit einem Studium in Aachen begonnen. Das Studiumfach zeichnet sich durch die Mischung zwischen Mathematik, Informatik und Maschinenbau aus. Die erlernten Fähigkeiten konnte ich in meiner weiteren Laufbahn sehr oft produktiv einsetzen.</p>
+            </div>
+            <div class="dot"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Ende Laufbahn Section-->
+  
+  <!-- Projekte Section -->
+    <section id="projekte">
+      <div class="projekt-card container">
+        <h1 class="section-title">Projekte</h1>
+        <div id="project-readme">
+          <!-- Der Inhalt der README.md wird hier dynamisch via JavaScript eingefügt -->
+          <p>Lade Projektbeschreibung...</p>
+        </div>
+      </div>
+    </section> 
+    <!-- Ende Projekte Section -->
+
+  <!--Skills Section-->
+  <section id="skills">
+    <div class="skills container">
+      <div class="skills-header">
+        <h1 class="section-title">Fähigkeiten</h1>
+      </div>
+      <div class="alle-skills">
+        <div class="skills-item">
+          <h3>CS Skills</h3>
+          <div class="skill">
+            <div class="skill-name">Catia V5</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="80%" style="max-width:80%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Matlab</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="90%" style="max-width:90%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Simulink</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="90%" style="max-width:90%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">C++</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="70%" style="max-width:70%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="80%" style="max-width:80%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-item">
+          <h3>Sprachen</h3>
+          <div class="skill">
+            <div class="skill-name">Deutsch</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="100%" style="max-width:100%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Englisch</div>
+            <div class="skill-bar">
+              <div class="skill-per" per="80%" style="max-width:80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Ende Skills Section-->
+
+  <!--Kontakt Section-->
+  <section id="kontakt">
+    <div class="kontakt container">
+      <div>
+        <h1 class="section-title">Kontakt</h1>
+      </div>
+      <div class="kontakt-inhalt">
+        <div class="kontakt-item">
+          <div class="icon">
+            <img src="email_icon.png" alt="Email">
+          </div>
+          <div class="kontakt-info">
+            <h1>E-Mail</h1>
+            <h2>
+              <p>Schreiben Sie mir eine <a href="redirect-privacy.php">E-Mail</a>.</p>
+            </h2>
+          </div>
+        </div>
+        <div class="kontakt-item">
+          <div class="icon">
+            <img src="linkedin_icon.png" alt="LinkedIn">
+          </div>
+          <div class="kontakt-info">
+            <h1>LinkedIn</h1>
+            <h2><a href="https://www.linkedin.com/in/marius-giesa-36472b243/">Marius Giesa</a></h2>
+          </div>
+        </div>
+        <div class="kontakt-item">
+          <div class="icon">
+            <img src="phone_icon.png" alt="Phone">
+          </div>
+          <div class="kontakt-info">
+            <h1>Phone</h1>
+            <h2>Offline wegen Spamgefahr</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Ende Kontakt Section-->
+
+  <!--To-Top-Button-->
+  <a href="#home" class="top">
+    <p>Top</p>
+  </a>
+
+  <!--Footer-->
+  <footer id="impressum">
+    <div>
+      <h2>Impressum</h2>
+      <div class="impressum">
+        <div class="col-left">
+          <h5>Kontakt</h5>
+          <div class="kontaktdaten">
+            <ul>
+              <li>Marius Giesa</li>
+              <li>Eckertweg 20</li>
+              <li>52074 Aachen</li>
             </ul>
-        </nav>
-    </header>
-
-    <!--Home Section-->
-    <section id="home">
-        <div class="home container">
-            <div>
-                <h1>Hi,<span></span></h1>
-                <h1>Ich bin Marius<span></span></h1>
-            </div>
+          </div>
         </div>
-    </section>
-    <!--Ende Home Section-->
-
-    <!--About Section-->
-    <section id="about">
-        <div class="about container">
-            <div class="col-left">
-                <div class="about-img">
-                    <!--im folgenden Tag Bilddatei angeben mit src="dateiname.jpg" oder auch png-->
-                    <img src="titelbild.png" alt="Bild konnte nicht geladen werden.">
-                </div>
-            </div>
-            <div class="col-right">
-                <h1 class="section-title">Über mich</h1>
-                <h2>Wer bin ich?</h2>
-                <p>Mein Name ist Marius und ich bin <span id="alter"></span> Jahre alt. Im Moment befinde ich mich auf meinem Weg ein Ingenieur im Bereich der Fahrzeugtechnik zu werden. Für Themen rund um das Automobil begeistere ich mich bereits mein halbes Leben lang, vor allem für aktuelle Trends der Technologie habe ich immer ein gewisses Fabel. <br /><br />Neben der Hochschule engagiere ich mich in verschiedenen ehrenamtlichen Organisationen, wie zum Beispiel der KjG Grevenbroich.</p>
-            </div>
-
+        <div class="col-right">
+          <h5>Hinweise zum Datenschutz</h5>
+          <a href="datenschutz.html" class="linkDatenschutz">
+            <p>Datenschutzerklärung</p>
+          </a>
         </div>
-    </section>
-    <!--Ende About Section-->
+      </div>
+    </div>
+  </footer>
 
-    <!--Laufbahn Section-->
-    <section id="laufbahn">
-        <div class="laufbahn container">
-            <div class="laufbahn-top">
-                <h1 class="section-title">Laufbahn</h1>
-            </div>
-            <div class="laufbahn-bottom">
-                <div class="laufbahn-item">
-                    <!--folgend ebenfalls in src="..." Bilddateien ergänzen. Mit alt="..." kann man einen Alternativtext angeben, falls z.B. das Bild nicht geladen werden kann-->
-                    <div class="icon"><img src="pggLogo.png" alt="Logo Pascal Gymnasium"></div>
-                    <h2>Abitur am Pascal- Gymnasium Grevenbroich</h2>
-                    <p>In meiner Schulzeit war ich am Pascal-Gymnasium in Grevenbroich. Hier habe ich mich besonders für alle MINT Fächer begeistert, welche an unserer Schule zum Glück stark gefördert wurden. Mit den Leistungskursen Mathematik und Chemie schloss ich mein Abitur schließlich mit einer 1,9 ab.</p>
-                </div>
-                <div class="laufbahn-item">
-                    <div class="icon"><img src="rwthLogo.png" alt="Logo RWTH"></div>
-                    <h2>Studium Computational Engineering Science </h2>
-                    <p>Nach meinem Abitur habe ich mich für das Studium „Computational Engineering Science“ an der RWTH entschieden, da ich hier ein großes Zukunftspotenzial gesehen habe. Hier habe ich auch die Grundlagen der Programmierung mit C++ und Matlab erlernt. Allerdings habe ich auch festgestellt, dass mir der direkte Bezug zur Praxis immer mehr gefehlt hat. Daraufhin habe ich mich dazu entschlossen als HiWi anzufangen und den Studiengang gewechselt.</p>
-                </div>
-                <div class="laufbahn-item">
-                    <div class="icon"><img src="ikafkaLogo.png" alt="Logo ika/fka"></div>
-                    <h2>Student Assistant am IKA & fka GmbH</h2>
-                    <p>Im November 2018 habe ich mit einer HiWi Stelle als Software Developer in der E/E Abteilung am Institut für Kraftfahrzeuge in Aachen begonnen. Im September 2019 habe ich zum privaten Teil des Institutes gewechselt und bis Oktober 2022 beim Develpment & Testing von neuer Software mitgeholfen.</p>
-                </div>
-                <div class="laufbahn-item">
-                    <div class="icon"><img src="Logo Job 2.png" alt="Logo Job 2"></div>
-                    <h2>Student Intern und Assistant bei der Bertrandt Technology GmbH</h2>
-                    <p>Im Oktober 2022 habe ich ein drei monatiges Praktikum mit anschließender Bachelorarbeit bei der Bertrandt Technology GmbH im Bereich ADAS angefangen. Dort habe ich bis in den Mai 2023 erfolgreich an der Entwicklung einer autonomen Roboterplattform mitgeholfen. </p>
-                </div>
-                <div class="laufbahn-item">
-                    <div class=""><img src="fhLogo.png" alt="Logo FH Aachen"></div>
-                    <h2>Bachelor of Engineering in Fahrzeug- und Antriebstechnik</h2>
-                    <p>Meinen Bachelor habe ich an der FH Aachen in Fahrzeug und Antriebstechnik gemacht. Hier habe ich mich in die Themengebiete Karosserie und Interieur vertieft. Dadurch habe ich besonders im Bereich CAD mit Catia V5 viele Erfahrungen gesammelt, aber auch im Softwarebereich haben wir mittels Matlab und Simulink in vielen Projekten Erfahrungen gesammelt.</p>
-                </div>
-                  <div class="laufbahn-item">
-                    <div class=""><img src="fhLogo.png" alt="Logo FH Aachen"></div>
-                    <h2>Studium International Automotive Engineering</h2>
-                    <p>Im Moment beginne ich an der FH Aachen meinen Master in International Automotive Engineering. Das Studium vermittelt tiefergehendes Wissen über bisherige und neue Technologien, die Wechselwirkungen zwischen Technik und Nachhaltigkeit und zu guter Letzt die global vernetzte Arbeit in der Fahrzeugbranche.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Ende Laufbahn Section-->
-
-    <!--Skills Section-->
-     <section id="skills">
-        <div class="skills container">
-            <div class="skills-header">
-                <h1 class="section-title">Fähigkeiten</h1>
-            </div>
-            <div class="alle-skills">
-                <div class="skills-item">
-                    <h3>CS Skills</h3>
-                    <div class="skill">
-                        <div class="skill-name">Catia V5</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="80%" style="max-width:80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-name">Matlab</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90%" style="max-width:90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-name">Simulink</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90%" style="max-width:90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-name">C++</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="70%" style="max-width:70%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-name">Python</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="80%" style="max-width:80%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-item">
-                    <h3>Sprachen</h3>
-                    <div class="skill">
-                        <div class="skill-name">Deutsch</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="100%" style="max-width:100%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Englisch</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="80%" style="max-width:80%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Ende Skills Section-->
-
-    <!--Kontakt Section-->
-    <section id="kontakt">
-        <div class="kontakt container">
-            <div>
-                <h1 class="section-title">Kontakt</h1>
-            </div>
-            <div class="kontakt-inhalt">
-                <div class="kontakt-item">
-                    <div class="icon"> <img src="email_icon.png" alt="Email"></div>
-                    <div class="kontakt-info">
-                        <h1>E-Mail</h1>
-                        <h2><p>Schreiben Sie mir eine <a href="redirect-privacy.php">E-Mail</a>.</p></h2>
-                    </div>
-                </div>
-                <div class="kontakt-item">
-                    <div class="icon"> <img src="linkedin_icon.png" alt="LinkedIn"></div>
-                    <div class="kontakt-info">
-                        <h1>LinkedIn</h1>
-                        <h2><a href="https://www.linkedin.com/in/marius-giesa-36472b243/">Marius Giesa</a></h2>
-                    </div>
-                </div>
-                <div class="kontakt-item">
-                    <div class="icon"> <img src="phone_icon.png" alt="Phone"></div>
-                    <div class="kontakt-info">
-                        <h1>Phone</h1>
-                        <h2>Offline wegen Spamgefahr</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Ende Kontakt Section-->
-
-    <!--To-Top-Button-->
-    <a href="#home" class="top">
-        <p>Top</p>
-    </a>
-
-
-    <!--Footer-->
-    <footer id="impressum">
-        <div>
-            <h2>Impressum</h2>
-            <div class="impressum">
-                <div class="col-left">
-                    <h5>Kontakt</h5>
-                    <div class="kontaktdaten">
-
-                        <ul>
-                            <li>Marius Giesa</li>
-                            <li>Eckertweg 20</li>
-                            <li>52074 Aachen</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-right">
-                    <h5>Hinweise zum Datenschutz</h5>
-                    <a href="datenschutz.html" class="linkDatenschutz">
-                        <p>Datenschutzerklärung</p>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <script src="my_script.js"></script>
+  <script src="my_script.js"></script>
 </body>
-
 </html>
