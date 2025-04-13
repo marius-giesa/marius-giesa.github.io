@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Load README from GitHub und render als HTML
   function loadReadme() {
-    fetch("https://github.com/marius-giesa/euro-exchange-widget/blob/289f62e2235f458fe89f6951c45a549e0cdcf1df/README.md")
+    fetch("https://raw.githubusercontent.com/marius-giesa/euro-exchange-widget/main/README.md"")
       .then(response => response.text())
       .then(markdown => {
         // Mit der Marked-Bibliothek Markdown in HTML umwandeln
