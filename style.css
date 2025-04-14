@@ -24,7 +24,7 @@ a {
   justify-content: center;
 }
 
-/* Standard Styles */
+/* Globaler Bildstil */
 img {
   width: 100%;
   height: auto;
@@ -166,7 +166,7 @@ nav .hamburger-icon-container {
   animation-delay: 0.3s;
 }
 
-/* About Section (Originales Design: Bild links, Text rechts) */
+/* About Section */
 #about .about {
   flex-direction: row;
   text-align: center;
@@ -207,7 +207,7 @@ nav .hamburger-icon-container {
 .laufbahn.container {
   flex-direction: column;
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8;  
   padding: 100px 0;
 }
 .laufbahn-bottom {
@@ -220,8 +220,6 @@ nav .hamburger-icon-container {
   margin: 0 auto;
   text-align: center;
 }
-
-/* Vertikale Linie in der Mitte */
 .timeline-line {
   position: absolute;
   left: 50%;
@@ -232,8 +230,6 @@ nav .hamburger-icon-container {
   background-color: #66a5ad;
   z-index: 0;
 }
-
-/* Timeline-Events: Grid (3 Spalten: 1fr, auto, 1fr) */
 .timeline-event {
   position: relative;
   display: grid;
@@ -251,8 +247,6 @@ nav .hamburger-icon-container {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Dot in der mittleren Spalte, in Zeile 1 */
 .timeline-event .dot {
   grid-column: 2;
   grid-row: 1;
@@ -265,11 +259,8 @@ nav .hamburger-icon-container {
   z-index: 2;
   margin-top: 4px;
 }
-
-/* Für Events mit .left: Bild in Spalte 1, Content in Spalte 3 */
 .timeline-event.left .image {
   grid-column: 1;
-  /* Wir nutzen hier Flex, um das Bild rechtsbündig im Container auszurichten */
   display: flex;
   justify-content: flex-end;
 }
@@ -278,8 +269,6 @@ nav .hamburger-icon-container {
   justify-self: start;
   text-align: left;
 }
-
-/* Für Events mit .right: Content in Spalte 1, Bild in Spalte 3 */
 .timeline-event.right .content {
   grid-column: 1;
   justify-self: end;
@@ -287,19 +276,14 @@ nav .hamburger-icon-container {
 }
 .timeline-event.right .image {
   grid-column: 3;
-  /* Hier Bilder linksbündig */
   display: flex;
   justify-content: flex-start;
 }
-
-/* Bilder in der Timeline (1/3 der Spaltenbreite) */
 .timeline-event .image img {
   width: 33%;
   height: auto;
   object-fit: contain;
 }
-
-/* Schriftgröße 11pt für Untertitel und Fließtext in Timeline-Events */
 .timeline-event p,
 .timeline-event .subtitle {
   font-size: 11pt;
@@ -376,38 +360,81 @@ nav .hamburger-icon-container {
   z-index: 1;
 }
 
-/* Projekte Section Styling */
+/* ----------------------- Projekte Section ----------------------- */
+/* Allgemeine Styles für den Projekte-Bereich */
 #projekte {
-  padding: 100px 20px;
-  background: #f0f0f0;
+  background-color: #fff;  /* Hintergrundfarbe für Projekte (wie im Original) */
+  padding: 2rem 0;
   text-align: center;
 }
-.projekt-card {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px;
-  background: white;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+
+/* Bereich oberhalb des Titels: Section Header */
+#projekte .section-header {
+  padding-top: 3rem;           /* Zusätzlicher Padding oberhalb des Titels */
+  background-color: inherit;   /* Übernimmt die Hintergrundfarbe von #projekte */
 }
-.projekt-card h2 {
-  margin-bottom: 20px;
+
+/* Angepasster Projekttitel */
+#projekte .section-header .section-title {
+  margin-bottom: 1.5rem;
+  font-family: system-ui, sans-serif;  /* Eigene Typografie des Projektbereichs */
+  color: #222;
 }
-.projekt-card a {
+
+/* Projekt-Container, in dem die einzelnen Projekte stehen */
+#projekte .projekt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Einzelne Projekt-Boxen */
+#projekte .projekt {
+  font-family: system-ui, sans-serif;
+  color: #222;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+#projekte .projekt h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#projekte .projekt p {
+  font-size: 1rem;
+}
+
+/* Bilder in der Projektsektion speziell überschreiben */
+#projekte .projekt .readme-container img {
+  width: auto;          /* Keine 100%-Breite, damit Originalformat erhalten bleibt */
+  max-width: 100%;
+  height: auto;
+  object-fit: initial;
+}
+
+#projekte .repo-link {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #66a5ad;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #0366d6;
   color: white;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 4px;
-}
-.projekt-card a:hover {
-  background: #558f9e;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
+#projekte .repo-link:hover {
+  background-color: #024fa1;
+}
 
-/* Kontakt Section */
+/* ----------------------- Kontakt Section ----------------------- */
 #kontakt .kontakt {
   flex-direction: column;
   margin: 0 auto;
@@ -469,7 +496,7 @@ nav .hamburger-icon-container {
   z-index: 100;
   opacity: 0;
   pointer-events: none;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .top p {
   color: white;
@@ -485,7 +512,7 @@ nav .hamburger-icon-container {
   opacity: 1;
 }
 
-/* Footer */
+/* ----------------------- Footer ----------------------- */
 footer {
   background-color: grey;
   min-height: 50px;
@@ -528,7 +555,7 @@ footer .linkDatenschutz p:hover {
   text-decoration: underline;
 }
 
-/* Keyframes */
+/* ----------------------- Keyframes ----------------------- */
 @keyframes text_reveal_box {
   50% { width: 100%; left: 0; }
   100% { width: 0; left: 100%; }
@@ -541,7 +568,7 @@ footer .linkDatenschutz p:hover {
   to { width: 100%; }
 }
 
-/* Media Queries */
+/* ----------------------- Media Queries ----------------------- */
 @media only screen and (max-width: 825px) {
   nav .hauptmenu {
     position: fixed;
@@ -598,7 +625,6 @@ footer .linkDatenschutz p:hover {
     text-align: left;
     padding: 20px 0;
   }
-  /* Timeline: bei Smartphones wird das Grid auf 2 Spalten umgestellt */
   .timeline-event {
     grid-template-columns: auto 1fr;
     margin-left: 70px;

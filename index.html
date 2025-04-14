@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <meta name="robots" content="noindex">
   <title>Meine Webseite</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <header id="navb">
@@ -133,14 +135,24 @@
   
   <!-- Projekte Section -->
     <section id="projekte">
-      <div class="projekt-card container">
-        <h1 class="section-title">Projekte</h1>
-        <div id="project-readme">
-          <!-- Der Inhalt der README.md wird hier dynamisch via JavaScript eingefügt -->
-          <p>Lade Projektbeschreibung...</p>
-        </div>
+        <div class="section-header">
+           <h2 class="section-title">Projekte</h2>
       </div>
-    </section> 
+
+      <!-- Projekt 1: euro-exchange-widget -->
+      <div class="projekt" 
+           data-user="marius-giesa" 
+           data-repo="euro-exchange-widget" 
+           data-branch="main"
+           data-linktext="Zum euro-exchange-widget Repo">
+        <h3>euro-exchange-widget</h3>
+        <a class="repo-link" target="_blank">Lade...</a>
+        <div class="readme-container">Lade README...</div>
+      </div>
+
+      <!-- Projekt 2: einfach Projekt 1 duplizieren und anpassen -->
+
+    </section>
     <!-- Ende Projekte Section -->
 
   <!--Skills Section-->

@@ -71,21 +71,39 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   // Load README from GitHub und render als HTML
-  function loadReadme() {
-    fetch("https://raw.githubusercontent.com/marius-giesa/euro-exchange-widget/main/README.md"")
-      .then(response => response.text())
-      .then(markdown => {
-        // Mit der Marked-Bibliothek Markdown in HTML umwandeln
-        const htmlContent = marked(markdown);
-        document.getElementById("project-readme").innerHTML = htmlContent;
-      })
-      .catch(error => {
-        console.error("Fehler beim Laden des Readme:", error);
-        document.getElementById("project-readme").innerHTML =
-          "<p>Das Projektreadme konnte leider nicht geladen werden.</p>";
-      });
-  }
-  
-  // Aufruf beim Laden
-  loadReadme();
+    const projects = document.querySelectorAll(".projekt");
+
+  projects.forEach(async (project) => {
+    const user = project.dataset.user;
+    const repo = project.dataset.repo;
+    const branch = project.dataset.branch || "main";
+    const linkText = project.dataset.linktext || "Zum Repository";
+    const container = project.querySelector(".readme-container");
+    const linkElement = project.querySelector(".repo-link");
+
+    const baseRawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}`;
+    const readmeUrl = `${baseRawUrl}/README.md`;
+    const repoUrl = `https://github.com/${user}/${repo}`;
+
+    // Setze GitHub-Link
+    if (linkElement) {
+      linkElement.href = repoUrl;
+      linkElement.textContent = linkText;
+    }
+
+    try {
+      const response = await fetch(readmeUrl);
+      if (!response.ok) throw new Error("README konnte nicht geladen werden");
+
+      let markdown = await response.text();
+
+      // Ersetze relative Bildpfade
+      markdown = markdown.replace(/!\[([^\]]*)\]\((?!http)([^)]+)\)/g, `![$1](${baseRawUrl}/$2)`);
+
+      const html = marked.parse(markdown);
+      container.innerHTML = html;
+    } catch (err) {
+      container.innerHTML = `<p>Fehler beim Laden der README: ${err.message}</p>`;
+    }
+  });
 });
