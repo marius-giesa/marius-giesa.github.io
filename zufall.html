@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Zufälliger Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="output">Warte auf 26. Juni, 20:30 Uhr...</div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    function checkTimeAndSetName() {
+      const now = new Date();
+
+      // Zielzeitpunkt: 26. Juni, 20:30 MESZ (UTC+2)
+      const target = new Date(Date.UTC(2025, 5, 26, 13, 52)); // UTC-Zeit für 20:30 MESZ
+
+      if (now >= target) {
+        // Name nur einmal festlegen
+        if (!localStorage.getItem("chosenName")) {
+          const randomNumber = Math.floor(Math.random() * 1000);
+          const name = (randomNumber % 2 === 0) ? "Marius" : "Marius";
+          localStorage.setItem("chosenName", name);
+        }
+
+        output.textContent = localStorage.getItem("chosenName");
+      } else {
+        // Vor Zielzeit regelmäßig prüfen
+        setTimeout(checkTimeAndSetName, 1000); // jede Sekunde prüfen
+      }
+    }
+
+    checkTimeAndSetName();
+  </script>
+</body>
+</html>
